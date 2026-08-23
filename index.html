@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080d">
+  <title>VoidPatch — محسن فيديو TikTok</title>
+  <meta name="description" content="حسّن بنية ملف MP4 محليًا داخل متصفحك بدون رفعه إلى أي سيرفر.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <nav class="nav wrap">
+    <a class="brand" href="#top" aria-label="VoidPatch">
+      <span class="brand-mark">V</span>
+      <span>Void<span>Patch</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#patcher">المعالج</a>
+      <a href="#how">كيف يعمل؟</a>
+      <a href="#privacy">الخصوصية</a>
+    </div>
+    <a class="nav-button" href="#patcher">ابدأ الآن</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="version"><i></i> Void Engine v1.0</div>
+      <h1>جهّز فيديوهاتك<br><span>لأفضل توافق مع TikTok</span></h1>
+      <p>إعادة ترتيب وتحسين بنية MP4 بدون إعادة ترميز، وبدون تغيير الصورة أو الصوت. كل شيء يحدث داخل جهازك.</p>
+      <a class="primary hero-button" href="#patcher">ابدأ المعالجة <span>←</span></a>
+      <div class="metrics">
+        <div><strong>100%</strong><span>معالجة محلية</span></div>
+        <div><strong>0%</strong><span>خسارة جودة</span></div>
+        <div><strong>MP4</strong><span>H.264 / H.265</span></div>
+      </div>
+    </section>
+
+    <section class="engine wrap" id="patcher">
+      <div class="section-kicker">PATCH ENGINE</div>
+      <div class="section-heading">
+        <div><h2>VoidPatch Engine</h2><p>اختر الفيديو، عالجه، ثم حمّل النسخة الجديدة فورًا.</p></div>
+        <span class="secure"><i></i> لا يتم رفع الملفات</span>
+      </div>
+
+      <div class="patch-card">
+        <div class="engine-tab"><span class="bolt">ϟ</span><div><strong>Local Void</strong><small>اختيار ← معالجة ← تحميل</small></div><span class="lossless">LOSSLESS</span></div>
+
+        <input type="file" id="fileInput" accept="video/mp4,.mp4" hidden>
+        <button class="drop-zone" id="dropZone" type="button">
+          <span class="upload-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0L7 9m5-5 5 5M5 15v4h14v-4"/></svg>
+          </span>
+          <strong id="dropTitle">اسحب فيديو MP4 إلى هنا</strong>
+          <span id="dropSubtitle">أو اضغط لاختيار ملف من جهازك</span>
+          <em>MP4 فقط</em>
+        </button>
+
+        <div class="file-panel" id="filePanel" hidden>
+          <div class="file-main"><span class="file-icon">▶</span><div><strong id="fileName"></strong><small id="fileDetails"></small></div></div>
+          <button id="removeFile" type="button" aria-label="إزالة الملف">×</button>
+        </div>
+
+        <div class="status" id="status" aria-live="polite" hidden>
+          <div class="status-row"><span id="statusText">جاري التحليل…</span><strong id="statusPercent">0%</strong></div>
+          <div class="progress"><i id="progressBar"></i></div>
+        </div>
+
+        <button class="primary patch-button" id="patchButton" type="button" disabled>
+          <span>ϟ</span> معالجة الفيديو
+        </button>
+        <a class="download-button" id="downloadButton" hidden>تحميل الفيديو المعدّل <span>↓</span></a>
+        <p class="compatibility" id="message">الفيديو لا يغادر جهازك نهائيًا.</p>
+      </div>
+    </section>
+
+    <section class="how wrap" id="how">
+      <div class="section-kicker">HOW IT WORKS</div>
+      <h2>بسيط، سريع، وبدون ضغط</h2>
+      <div class="steps">
+        <article><b>01</b><span class="step-icon">＋</span><h3>اختر الفيديو</h3><p>اختر ملف MP4 من جهازك، بدون رفعه إلى الإنترنت.</p></article>
+        <article><b>02</b><span class="step-icon">ϟ</span><h3>تحسين الحاوية</h3><p>نعيد ترتيب بنية MP4 ونحدّث جداول مواقع العينات.</p></article>
+        <article><b>03</b><span class="step-icon">↓</span><h3>حمّل وانشر</h3><p>تحصل على نفس الصورة والصوت داخل ملف أكثر توافقًا.</p></article>
+      </div>
+    </section>
+
+    <section class="privacy wrap" id="privacy">
+      <div class="shield">◆</div>
+      <div><div class="section-kicker">PRIVATE BY DESIGN</div><h2>فيديوهاتك تبقى عندك</h2><p>المعالجة تعمل بجافاسكربت داخل المتصفح. لا يوجد حساب، قاعدة بيانات، أو سيرفر يستقبل ملفاتك.</p></div>
+    </section>
+  </main>
+
+  <footer class="wrap"><a class="brand" href="#top"><span class="brand-mark">V</span><span>Void<span>Patch</span></span></a><p>أداة مستقلة وغير تابعة لـ TikTok.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
